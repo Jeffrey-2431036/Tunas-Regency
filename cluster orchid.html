@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cluster Orchid - Tunas Regency</title>
+  <style>
+    :root {
+      --primary-color: #0D6EFD;
+      --secondary-color: #e9f7ef;
+      --text-color: #000;
+      --accent-color: #198754;
+      --feature-bg-color: #d1f1d6;
+      --hover-color: #a3e635;
+      --hover-text: #14532d;
+      --card-bg: #f0fdf4;
+      --hover-green: #d4f8d4;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    /* Improved Navigation */
+    nav {
+      background-color: var(--accent-color);
+      padding: 0.8em 0;
+      position: sticky;
+      top: 0;
+      z-index: 1100;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+      padding: 0 1em;
+      margin: 0;
+    }
+
+    nav li {
+      display: flex;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      padding: 0.6em 1.5em;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      text-align: center;
+    }
+
+    nav a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+
+    nav a:hover::before {
+      left: 100%;
+    }
+
+    nav a:hover {
+      background-color: var(--hover-color);
+      color: var(--hover-text);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* Page Header */
+    .page-header {
+      background-color: var(--accent-color);
+      color: white;
+      padding: 2em 1em;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      margin: 0.5em 0;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+
+    /* Layout gambar dan teks */
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 2em;
+    }
+
+    .info img {
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .info .type-img {
+      width: 300px;
+    }
+
+    .info .denah-img {
+      width: 180px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2em;
+      color: #0D6EFD;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 1.5em;
+      text-align: center;
+      margin-top: 4em;
+    }
+
+    footer p {
+      margin: 0.3em 0;
+    }
+
+    footer a {
+      color: #0D6EFD;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* CSS untuk Slick Carousel */
+    .slider img {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* CSS untuk mengatur ukuran video */
+    video {
+      width: 80%;
+      max-width: 800px;
+      height: 350px;
+      object-fit: cover;
+      display: block;
+      margin: 20px auto;
+    }
+
+    @media (max-width: 600px) {
+      .info {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .info img {
+        max-width: 80%;
+      }
+
+      .slider img {
+        width: 100%;
+      }
+
+      video {
+        width: 100%;
+        max-width: none;
+        height: auto;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+      
+      nav a {
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
+  </style>
+
+  <!-- Link CSS Slick Carousel -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#cluster">Cluster</a></li>
+      <li><a href="index.html#Fasilitas">Fasilitas</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>Cluster Orchid</h1>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Type 36 -->
+    <h2>Type 36</h2>
+    <div class="info">
+      <img class="type-img" src="unit orchid/Type 36-78.jpg" alt="Type 36">
+      <img class="denah-img" src="unit orchid/Denah T36.jpg" alt="Denah T36">
+    </div>
+
+    <!-- Type 45 -->
+    <h2>Type 45</h2>
+    <div class="info">
+      <img class="type-img" src="unit orchid/Type 45.jpg" alt="Type T45">
+      <img class="denah-img" src="unit orchid/Denah T45.jpg" alt="Denah T45">
+    </div>
+
+    <!-- Gambar Slide di bawah Type 45 -->
+    <h2>Cluster Orchid</h2>
+    <div class="slider">
+      <div><img src="unit orchid/foto1.jpg" alt="Foto 1"></div>
+      <div><img src="unit orchid/foto2.jpg" alt="Foto 2"></div>
+      <div><img src="unit orchid/foto3.jpg" alt="Foto 3"></div>
+      <div><img src="unit orchid/foto4.jpg" alt="Foto 4"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Tunas Regency</p>
+    <p>Jl. Brigjend katamso komplek tunas regency</p>
+    <p>Sagulung, Kota Batam - Kepulauan Riau, Indonesia</p>
+  </footer>
+
+  <!-- Link JS Slick Carousel dan jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- Script untuk Slick Carousel -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true,
+        arrows: true,
+      });
+    });
+  </script>
+
+</body>
+</html>
